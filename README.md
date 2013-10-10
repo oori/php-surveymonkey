@@ -96,9 +96,10 @@ public function getRespondentList($surveyId, $params = array()){}
  * @see https://developer.surveymonkey.com/mashery/get_responses
  * @param string $surveyId Survey ID
  * @param array $respondentIds Array of respondents IDs to retrieve
+ * @param integer $chunkSize optional number of respondants to fetch in each chunk. We split it to multiple requests to conform with SurveyMonkey's API limits.  If successful, the returned array is a joined array of all chunks.
  * @return array Results
  */
-public function getResponses($surveyId, $respondentIds){}
+public function getResponses($surveyId, $respondentIds, $chunkSize = 100){}
 ```
 
 **getResponseCount**
