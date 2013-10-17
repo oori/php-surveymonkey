@@ -170,12 +170,6 @@ class SurveyMonkey {
         $jsonErr = json_last_error();
         if ($parsedResult === null  &&  $jsonErr !== JSON_ERROR_NONE) return $this->failure("Error [$jsonErr] parsing result JSON");
 
-        // SurveyMonkey API returns html-encoded json.  This is an aknowlaged "known bug" on their side.   Once they fix it, this decoding function should be removed.
-		array_walk_recursive($parsedResult, function(&$item) {
-    		if(is_string($item)) $item = html_entity_decode($item,ENT_QUOTES,'UTF-8');
-    	});
-
-
         $status = $parsedResult['status'];
         if ($status != self::SM_STATUS_SUCCESS) return $this->failure("API Error: Status [$status:" . self::explainStatusCode($status) . '].  Message [' . $parsedResult["errmsg"] . ']');
         else return $this->success($parsedResult["data"]);
