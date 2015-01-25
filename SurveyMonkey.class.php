@@ -355,7 +355,7 @@ class SurveyMonkey{
    * @return array Results
    */
   public function sendFlow($surveyId, $params = array()){
-    $params = array('survey_id'=>$surveyId);
+    $params['survey_id'] = $surveyId;
     return $this->run('batch/send_flow', $params);
   }
 }
