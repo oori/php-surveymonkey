@@ -16,11 +16,11 @@ All methods return an array containing a **success** boolean, and the **data** -
 Advanced
 ----
 ```
-$SM = new SurveyMonkey("myApiKey" , "myAccessToken", 
+$SM = new SurveyMonkey("myApiKey" , "myAccessToken",
     array(  // Override default API options (quite useless at the moment)
         'protocol' => 'http',                       // will not work.. they require SSL
         'hostname' => 'fake-api.surveymonkey.net'   // will also not work..
-    ), 
+    ),
     array(  // CURL override options
         CURLOPT_SSL_VERIFYPEER => false     // Better add cacert.pam, no?
         // ...<Any CURLOPT>...
@@ -113,6 +113,65 @@ public function getResponses($surveyId, $respondentIds, $chunkSize = 100){}
 public function getResponseCount($collectorId){}
 ```
 
+**getUserDetails**
+```
+/**
+ * Returns basic information about the logged-in user
+ * @see https://developer.surveymonkey.com/mashery/get_user_details
+ * @return array Results
+ */
+public function getUserDetails(){}
+```
+
+**getTemplateList**
+```
+/**
+ * Retrieves a paged list of templates provided by survey monkey.
+ * @see https://developer.surveymonkey.com/mashery/get_template_list
+ * @param array $params optional request array
+ * @return array Results
+ */
+public function getTemplateList($params = array()){}
+```
+
+**createCollector**
+```
+/**
+ * Retrieves a paged list of templates provided by survey monkey.
+ * @see https://developer.surveymonkey.com/mashery/create_collector
+ * @param string $surveyId Survey ID
+ * @param string $collectorName optional Collector Name - defaults to 'New Link'
+ * @param string $collectorType required Collector Type - only 'weblink' currently supported
+ * @param array $params optional request array
+ * @return array Results
+ */
+public function createCollector($surveyId, $collectorName = null, $collectorType = 'weblink'){}
+```
+
+**createFlow**
+```
+/**
+ * Create a survey, email collector and email message based on a template or existing survey.
+ * @see https://developer.surveymonkey.com/mashery/create_flow
+ * @param string $surveyTitle Survey Title
+ * @param array $params optional request array
+ * @return array Results
+ */
+public function createFlow($surveyTitle, $params = array()){}
+```
+
+**sendFlow**
+```
+/**
+ * Create an email collector and email message attaching them to an existing survey.
+ * @see https://developer.surveymonkey.com/mashery/send_flow
+ * @param string $surveyId Survey ID
+ * @param array $params optional request array
+ * @return array Results
+ */
+public function sendFlow($surveyId, $params = array()){}
+```
+
 API version
 -----------
 v2
@@ -125,5 +184,5 @@ Tests
 
 License
 ----
-**No** rights reserved.  
+**No** rights reserved.
 *Do whatever you want with it,  It's free*

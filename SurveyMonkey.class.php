@@ -217,7 +217,7 @@ class SurveyMonkey{
    * @return array Results
    */
   public function getSurveyDetails($surveyId){
-    $params = array ( 'survey_id' => $surveyId );
+    $params = array('survey_id'=>$surveyId);
     return $this->run('surveys/get_survey_details', $params);
   }
 
@@ -245,29 +245,6 @@ class SurveyMonkey{
     return $this->run('surveys/get_respondent_list', $params);
   }
 
-  //user methods
-
-  /**
-   * Returns basic information about the logged-in user
-   * @see https://developer.surveymonkey.com/mashery/get_user_details
-   * @return array Results
-   */
-  public function getUserDetails(){
-    return $this->run('user/get_user_details');
-  }
-
-  //template methods
-
-  /**
-   * Retrieves a paged list of templates provided by survey monkey.
-   * @see https://developer.surveymonkey.com/mashery/get_template_list
-   * @param array $params optional request array
-   * @return array Results
-   */
-  public function getTemplateList($params = array()){
-    return $this->run('surveys/get_template_list', $params);
-  }
-
   /**
    * Takes a list of respondent ids and returns the responses that correlate to them.
    * @see https://developer.surveymonkey.com/mashery/get_responses
@@ -292,7 +269,7 @@ class SurveyMonkey{
       'survey_id' => $surveyId,
       'respondent_ids' => $respondentIds
     );
-    return $this->run('get_responses', $params);
+    return $this->run('surveys/get_responses', $params);
   }
 
   /**
@@ -303,7 +280,83 @@ class SurveyMonkey{
    */
   public function getResponseCount($collectorId){
     $params = array('collector_id' => $collectorId);
-    return $this->run('get_response_counts', $params);
+    return $this->run('surveys/get_response_counts', $params);
+  }
+
+  //user methods
+
+  /**
+   * Returns basic information about the logged-in user
+   * @see https://developer.surveymonkey.com/mashery/get_user_details
+   * @return array Results
+   */
+  public function getUserDetails(){
+    return $this->run('user/get_user_details');
+  }
+
+  //template methods
+
+  /**
+   * Retrieves a paged list of templates provided by survey monkey.
+   * @see https://developer.surveymonkey.com/mashery/get_template_list
+   * @param array $params optional request array
+   * @return array Results
+   */
+  public function getTemplateList($params = array()){
+    return $this->run('templates/get_template_list', $params);
+  }
+
+  //collector methods
+
+  /**
+   * Retrieves a paged list of templates provided by survey monkey.
+   * @see https://developer.surveymonkey.com/mashery/create_collector
+   * @param string $surveyId Survey ID
+   * @param string $collectorName optional Collector Name - defaults to 'New Link'
+   * @param string $collectorType required Collector Type - only 'weblink' currently supported
+   * @param array $params optional request array
+   * @return array Results
+   */
+  public function createCollector($surveyId, $collectorName = null, $collectorType = 'weblink'){
+    $params = array(
+      'survey_id'=>$surveyId,
+      'collector'=>array(
+        'type'=>$collectorType,
+        'name'=>$collectorName
+      )
+    );
+    return $this->run('collectors/create_collector', $params);
+  }
+
+  //batch methods
+
+  /**
+   * Create a survey, email collector and email message based on a template or existing survey.
+   * @see https://developer.surveymonkey.com/mashery/create_flow
+   * @param string $surveyTitle Survey Title
+   * @param array $params optional request array
+   * @return array Results
+   */
+  public function createFlow($surveyTitle, $params = array()){
+    if (isset($params['survey'])){
+      $params['survey']['survey_title'] = $surveyTitle;
+    }
+    else{
+      $params['survey'] = array('survey_title'=>$surveyTitle);
+    }
+    return $this->run('batch/create_flow', $params);
+  }
+
+  /**
+   * Create an email collector and email message attaching them to an existing survey.
+   * @see https://developer.surveymonkey.com/mashery/send_flow
+   * @param string $surveyId Survey ID
+   * @param array $params optional request array
+   * @return array Results
+   */
+  public function sendFlow($surveyId, $params = array()){
+    $params = array('survey_id'=>$surveyId);
+    return $this->run('batch/send_flow', $params);
   }
 }
 
