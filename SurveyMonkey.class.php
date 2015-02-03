@@ -51,11 +51,12 @@ class SurveyMonkey{
    */
   const SM_STATUS_SUCCESS = 0;
 
-  /**
-   * @const HTTP response code: Success
-   */
-  const HTTP_RESPONSE_CODE_SUCCESS = 200;
-
+  public static function successfulHttpResponse($code){
+    if ($code >= 200 and $code < 300){
+      return true;
+    }
+    return false;
+  }
   /**
    * SurveyMonkey API Status code definitions
    */
@@ -154,7 +155,9 @@ class SurveyMonkey{
     $result = curl_exec( $this->conn );
     if ($result === false) return $this->failure('Curl Error: ' . curl_error($this->conn));
     $responseCode = curl_getinfo($this->conn, CURLINFO_HTTP_CODE);
-    if ($responseCode != self::HTTP_RESPONSE_CODE_SUCCESS) return $this->failure('Error ['.$responseCode.']: ' . $result);
+    if (!self::successfulHttpResponse($responseCode)){
+      return $this->failure('Error ['.$responseCode.']: ' . $result);
+    }
 
     $this->closeConnection();
 
@@ -278,7 +281,7 @@ class SurveyMonkey{
    * @param string $collectorId Collector ID
    * @return array Results
    */
-  public function getResponseCount($collectorId){
+  public function getResponseCounts($collectorId){
     $params = array('collector_id' => $collectorId);
     return $this->run('surveys/get_response_counts', $params);
   }
