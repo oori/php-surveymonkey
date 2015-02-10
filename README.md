@@ -179,7 +179,7 @@ v2
 
 Tests
 -----
-*TODO*
+See /tests/all_methods.php
 
 
 License
