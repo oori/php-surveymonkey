@@ -66,7 +66,8 @@ class SurveyMonkey{
     2 => "Invalid User Credentials",
     3 => "Invalid Request",
     4 => "Unknown User",
-    5 => "System Error"
+    5 => "System Error",
+    6 => "Plan Limit Exceeded"
   );
 
   /**
