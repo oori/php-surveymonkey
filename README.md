@@ -2,6 +2,11 @@ PHP class for SurveyMonkey API
 ==============================
 
 
+
+Class documentation
+http://oori.github.io/php-surveymonkey/docs/class-SurveyMonkey.html
+
+
 Basic usage
 ----
 ```
