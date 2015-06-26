@@ -1,4 +1,9 @@
 <?php
+/**
+ * Test configuration
+ * @package php-surveymonkey
+ * @subpackage tests
+ */
 
 /** @var string API key */
 $api_key = '<YOUR_KEY>';

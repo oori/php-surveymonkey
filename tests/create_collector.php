@@ -1,4 +1,9 @@
 <?php
+/**
+ * Test collector creation
+ * @package php-surveymonkey
+ * @subpackage tests
+ */
 
 require_once('init.inc.php');
 

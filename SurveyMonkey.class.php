@@ -1,7 +1,7 @@
 <?php
 /**
  * Class for SurveyMonkey API v2
- * @package default
+ * @package php-surveymonkey
  */
 class SurveyMonkey{
   /**
@@ -366,6 +366,7 @@ class SurveyMonkey{
 
 /**
  * A basic class for SurveyMonkey Exceptions.
- * @package default
+ * @package php-surveymonkey
+ * @subpackage exception
  */
 class SurveyMonkey_Exception extends Exception {}

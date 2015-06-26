@@ -1,4 +1,9 @@
 <?php
+/**
+ * Test initialization
+ * @package php-surveymonkey
+ * @subpackage tests
+ */
 
 require_once('config.inc.php');
 
