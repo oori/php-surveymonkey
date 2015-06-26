@@ -179,7 +179,7 @@ v2
 
 Tests
 -----
-See /tests/all_methods.php
+See <a href="tests/README.md">tests/README.md</a>
 
 
 License
