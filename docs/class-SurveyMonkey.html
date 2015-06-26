@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class SurveyMonkey</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-php.surveymonkey.html">
+						php-surveymonkey<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-php.surveymonkey.exception.html">
+						exception					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-SurveyMonkey.html">SurveyMonkey</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SurveyMonkey</h1>
+
+
+	<div class="description">
+	<p>Class for SurveyMonkey API v2</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-php.surveymonkey.html">php-surveymonkey</a><br>
+
+			<b>Located at</b> <a href="source-class-SurveyMonkey.html#2-365" title="Go to source code">SurveyMonkey.class.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="successfulHttpResponse" id="_successfulHttpResponse">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_successfulHttpResponse">#</a>
+		<code><a href="source-class-SurveyMonkey.html#54-59" title="Go to source code">successfulHttpResponse</a>( <span> <var>$code</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="explainStatusCode" id="_explainStatusCode">
+
+		<td class="attributes"><code>
+			 public static
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_explainStatusCode">#</a>
+		<code><a href="source-class-SurveyMonkey.html#73-80" title="Go to source code">explainStatusCode</a>( <span>integer <var>$code</var></span> )</code>
+
+		<div class="description short">
+			<p>Explain Survey Monkey status code</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Explain Survey Monkey status code</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$code</var></dt>
+					<dd>Status code</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Definition
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SurveyMonkey.html">SurveyMonkey</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-SurveyMonkey.html#82-107" title="Go to source code">__construct</a>( <span>string <var>$apiKey</var></span>, <span>string <var>$accessToken</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$connectionOptions</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>The SurveyMonkey Constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>The SurveyMonkey Constructor.</p>
+
+<p>This method is used to create a new SurveyMonkey object with a connection to a
+specific api key and access token</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$apiKey</var></dt>
+					<dd>A valid api key</dd>
+					<dt><var>$accessToken</var></dt>
+					<dd>A valid access token</dd>
+					<dt><var>$options</var></dt>
+					<dd>(optional) An array of options</dd>
+					<dt><var>$connectionOptions</var></dt>
+					<dd>(optional) cURL connection options</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SurveyMonkey.html">SurveyMonkey</a></code><br>A unique SurveyMonkey instance.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-SurveyMonkey_Exception.html">SurveyMonkey_Exception</a></code><br>If an error occurs creating the instance.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildUri" id="_buildUri">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildUri">#</a>
+		<code><a href="source-class-SurveyMonkey.html#109-116" title="Go to source code">buildUri</a>( <span>string <var>$endpoint</var></span> )</code>
+
+		<div class="description short">
+			<p>Build the request URI</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Build the request URI</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$endpoint</var></dt>
+					<dd>API endpoint to call in the form: resource/method</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Constructed URI
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConnection" id="_getConnection">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConnection">#</a>
+		<code><a href="source-class-SurveyMonkey.html#118-125" title="Go to source code">getConnection</a>( )</code>
+
+		<div class="description short">
+			<p>Get the connection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the connection</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="closeConnection" id="_closeConnection">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_closeConnection">#</a>
+		<code><a href="source-class-SurveyMonkey.html#127-132" title="Go to source code">closeConnection</a>( )</code>
+
+		<div class="description short">
+			<p>Close the connection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Close the connection</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="run" id="_run">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_run">#</a>
+		<code><a href="source-class-SurveyMonkey.html#134-172" title="Go to source code">run</a>( <span>string <var>$endpoint</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Run the</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Run the</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$endpoint</var></dt>
+					<dd>$method API method to run</dd>
+					<dt><var>$params</var></dt>
+					<dd>Parameters array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="failure" id="_failure">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_failure">#</a>
+		<code><a href="source-class-SurveyMonkey.html#176-186" title="Go to source code">failure</a>( <span>string <var>$msg</var></span> )</code>
+
+		<div class="description short">
+			<p>Return an error</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return an error</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd>Error message</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Result
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="success" id="_success">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_success">#</a>
+		<code><a href="source-class-SurveyMonkey.html#188-198" title="Go to source code">success</a>( <span>string <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Return a success with data</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return a success with data</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>Payload</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Result
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSurveyList" id="_getSurveyList">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSurveyList">#</a>
+		<code><a href="source-class-SurveyMonkey.html#207-215" title="Go to source code">getSurveyList</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Retrieves a paged list of surveys in a user's account.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieves a paged list of surveys in a user's account.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd>optional request array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Result
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/get_survey_list<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSurveyDetails" id="_getSurveyDetails">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSurveyDetails">#</a>
+		<code><a href="source-class-SurveyMonkey.html#217-226" title="Go to source code">getSurveyDetails</a>( <span>string <var>$surveyId</var></span> )</code>
+
+		<div class="description short">
+			<p>Retrieve a given survey's metadata.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieve a given survey's metadata.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$surveyId</var></dt>
+					<dd>Survey ID</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/get_survey_details<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCollectorList" id="_getCollectorList">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCollectorList">#</a>
+		<code><a href="source-class-SurveyMonkey.html#228-238" title="Go to source code">getCollectorList</a>( <span>string <var>$surveyId</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Retrieves a paged list of collectors for a survey in a user's account.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieves a paged list of collectors for a survey in a user's account.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$surveyId</var></dt>
+					<dd>Survey ID</dd>
+					<dt><var>$params</var></dt>
+					<dd>optional request array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/get_collector_list<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRespondentList" id="_getRespondentList">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRespondentList">#</a>
+		<code><a href="source-class-SurveyMonkey.html#240-250" title="Go to source code">getRespondentList</a>( <span>string <var>$surveyId</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Retrieves a paged list of respondents for a given survey and optionally collector</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieves a paged list of respondents for a given survey and optionally collector</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$surveyId</var></dt>
+					<dd>Survey ID</dd>
+					<dt><var>$params</var></dt>
+					<dd>optional request array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/get_respondent_list<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResponses" id="_getResponses">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResponses">#</a>
+		<code><a href="source-class-SurveyMonkey.html#252-277" title="Go to source code">getResponses</a>( <span>string <var>$surveyId</var></span>, <span>array <var>$respondentIds</var></span>, <span>integer <var>$chunkSize</var> = <span class="php-num">100</span></span> )</code>
+
+		<div class="description short">
+			<p>Takes a list of respondent ids and returns the responses that correlate to them.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Takes a list of respondent ids and returns the responses that correlate to them.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$surveyId</var></dt>
+					<dd>Survey ID</dd>
+					<dt><var>$respondentIds</var></dt>
+					<dd>Array of respondents IDs to retrieve</dd>
+					<dt><var>$chunkSize</var></dt>
+					<dd>optional number of respondants to fetch in each chunk. We split it to multiple requests to conform with SurveyMonkey's API limits.  If successful, the returned array is a joined array of all chunks.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/get_responses<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResponseCounts" id="_getResponseCounts">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResponseCounts">#</a>
+		<code><a href="source-class-SurveyMonkey.html#279-288" title="Go to source code">getResponseCounts</a>( <span>string <var>$collectorId</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns how many respondents have started and/or completed the survey for the given collector</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns how many respondents have started and/or completed the survey for the given collector</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$collectorId</var></dt>
+					<dd>Collector ID</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/get_response_counts<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUserDetails" id="_getUserDetails">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUserDetails">#</a>
+		<code><a href="source-class-SurveyMonkey.html#292-299" title="Go to source code">getUserDetails</a>( )</code>
+
+		<div class="description short">
+			<p>Returns basic information about the logged-in user</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns basic information about the logged-in user</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/get_user_details<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTemplateList" id="_getTemplateList">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTemplateList">#</a>
+		<code><a href="source-class-SurveyMonkey.html#303-311" title="Go to source code">getTemplateList</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Retrieves a paged list of templates provided by survey monkey.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieves a paged list of templates provided by survey monkey.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd>optional request array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/get_template_list<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createCollector" id="_createCollector">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createCollector">#</a>
+		<code><a href="source-class-SurveyMonkey.html#315-333" title="Go to source code">createCollector</a>( <span>string <var>$surveyId</var></span>, <span>string <var>$collectorName</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$collectorType</var> = <span class="php-quote">'weblink'</span></span>, <span>array <var>$params</var>,…</span> )</code>
+
+		<div class="description short">
+			<p>Retrieves a paged list of templates provided by survey monkey.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieves a paged list of templates provided by survey monkey.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$surveyId</var></dt>
+					<dd>Survey ID</dd>
+					<dt><var>$collectorName</var></dt>
+					<dd>optional Collector Name - defaults to 'New Link'</dd>
+					<dt><var>$collectorType</var></dt>
+					<dd>required Collector Type - only 'weblink' currently supported</dd>
+					<dt><var>$params</var>,…</dt>
+					<dd>optional request array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/create_collector<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createFlow" id="_createFlow">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createFlow">#</a>
+		<code><a href="source-class-SurveyMonkey.html#337-352" title="Go to source code">createFlow</a>( <span>string <var>$surveyTitle</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Create a survey, email collector and email message based on a template or existing survey.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a survey, email collector and email message based on a template or existing survey.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$surveyTitle</var></dt>
+					<dd>Survey Title</dd>
+					<dt><var>$params</var></dt>
+					<dd>optional request array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/create_flow<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sendFlow" id="_sendFlow">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sendFlow">#</a>
+		<code><a href="source-class-SurveyMonkey.html#354-364" title="Go to source code">sendFlow</a>( <span>string <var>$surveyId</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Create an email collector and email message attaching them to an existing survey.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create an email collector and email message attaching them to an existing survey.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$surveyId</var></dt>
+					<dd>Survey ID</dd>
+					<dt><var>$params</var></dt>
+					<dd>optional request array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Results
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://developer.surveymonkey.com/mashery/send_flow<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="SM_STATUS_SUCCESS" id="SM_STATUS_SUCCESS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-SurveyMonkey.html#49-52" title="Go to source code"><b>SM_STATUS_SUCCESS</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Const</h4>
+					<div class="list">
+							SurveyMonkey Status code:  Success<br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SM_STATUS_SUCCESS" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_apiKey" id="$_apiKey">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-SurveyMonkey.html#7-11" title="Go to source code"><var>$_apiKey</var></a>
+
+			<div class="description short">
+				<p>API key</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>API key</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_apiKey" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_accessToken" id="$_accessToken">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-SurveyMonkey.html#13-17" title="Go to source code"><var>$_accessToken</var></a>
+
+			<div class="description short">
+				<p>API access token</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>API access token</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_accessToken" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_protocol" id="$_protocol">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-SurveyMonkey.html#19-23" title="Go to source code"><var>$_protocol</var></a>
+
+			<div class="description short">
+				<p>API protocol</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>API protocol</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_protocol" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_hostname" id="$_hostname">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-SurveyMonkey.html#25-29" title="Go to source code"><var>$_hostname</var></a>
+
+			<div class="description short">
+				<p>API hostname</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>API hostname</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_hostname" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_version" id="$_version">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-SurveyMonkey.html#31-35" title="Go to source code"><var>$_version</var></a>
+
+			<div class="description short">
+				<p>API version</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>API version</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_version" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_connectionOptions" id="$_connectionOptions">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-SurveyMonkey.html#43-47" title="Go to source code"><var>$_connectionOptions</var></a>
+
+			<div class="description short">
+				<p>(optional) cURL connection options</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>(optional) cURL connection options</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_connectionOptions" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="SM_STATUS_CODES" id="$SM_STATUS_CODES">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-SurveyMonkey.html#60-71" title="Go to source code"><var>$SM_STATUS_CODES</var></a>
+
+			<div class="description short">
+				<p>SurveyMonkey API Status code definitions</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>SurveyMonkey API Status code definitions</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$SM_STATUS_CODES" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+<span class="php-num">0</span> =&gt; <span class="php-quote">&quot;Success&quot;</span>,
+<span class="php-num">1</span> =&gt; <span class="php-quote">&quot;Not Authenticated&quot;</span>,
+<span class="php-num">2</span> =&gt; <span class="php-quote">&quot;Invalid User Credentials&quot;</span>,
+<span class="php-num">3</span> =&gt; <span class="php-quote">&quot;Invalid Request&quot;</span>,
+<span class="php-num">4</span> =&gt; <span class="php-quote">&quot;Unknown User&quot;</span>,
+<span class="php-num">5</span> =&gt; <span class="php-quote">&quot;System Error&quot;</span>,
+<span class="php-num">6</span> =&gt; <span class="php-quote">&quot;Plan Limit Exceeded&quot;</span>
+  )</code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
