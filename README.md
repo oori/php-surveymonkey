@@ -1,6 +1,7 @@
+`DEPRECATED` - This repo uses the old v2 API. New projects should use the new v3 API directly, see https://developer.surveymonkey.com/api/v3/
+
 PHP class for SurveyMonkey API
 ==============================
-
 
 
 Class documentation
